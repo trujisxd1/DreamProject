@@ -9,6 +9,7 @@ import PueblosMagicos from './paginas/PueblosMagicos.jsx'
 import Front from './componentes/Front.jsx'
 import EventosInternacionales from './paginas/EventosInternacionales.jsx'
 import Ecoturismo from './paginas/Ecoturismo.jsx'
+import Contacto from './paginas/Contacto.jsx'
 
 
 
@@ -34,6 +35,10 @@ const router = createBrowserRouter(
     {
       path:"/ecoturismo",
       element:<Ecoturismo/>
+    },
+    {
+      path:"/contacto",
+      element:<Contacto/>
     }
  
   ]
