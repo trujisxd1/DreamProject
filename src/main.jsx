@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Index from './paginas/Index.jsx'
 import PueblosMagicos from './paginas/PueblosMagicos.jsx'
 import Front from './componentes/Front.jsx'
+import EventosInternacionales from './paginas/EventosInternacionales.jsx'
 
 
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter(
     {
       path:"/pueblos-magicos",
       element:<PueblosMagicos/>
+    },
+    {
+      path:"/eventos-internacionales",
+      element:<EventosInternacionales/>
     }
  
   ]
