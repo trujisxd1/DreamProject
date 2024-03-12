@@ -5,7 +5,8 @@ import Header from "../componentes/Header"
 import '../assets/css/Carousel.css'
 import '../assets/css/style.css'
 import '../assets/css/Card.css'
-import { cardsData } from '../data/carruselData';
+import { cardsData } from '../data/cardsData';
+
 const PueblosMagicos = () => {
   return (
     <>
