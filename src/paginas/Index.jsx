@@ -6,6 +6,7 @@ import Carrucel from "../componentes/Carrucel";
 import '../assets/css/Home.css'
 import '../assets/css/Carousel.css'
 import '../assets/css/style.css'
+import '../assets/css/Contacto.css'
 import { contentData } from "../data/carruselData";
 import Header from "../componentes/Header";
 
