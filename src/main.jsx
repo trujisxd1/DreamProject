@@ -8,6 +8,7 @@ import Index from './paginas/Index.jsx'
 import PueblosMagicos from './paginas/PueblosMagicos.jsx'
 import Front from './componentes/Front.jsx'
 import EventosInternacionales from './paginas/EventosInternacionales.jsx'
+import Ecoturismo from './paginas/Ecoturismo.jsx'
 
 
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter(
     {
       path:"/eventos-internacionales",
       element:<EventosInternacionales/>
+    },
+    {
+      path:"/ecoturismo",
+      element:<Ecoturismo/>
     }
  
   ]
