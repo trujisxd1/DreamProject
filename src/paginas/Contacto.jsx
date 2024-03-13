@@ -5,30 +5,47 @@ import Carousel from 'react-bootstrap/Carousel';
 const Contacto = () => {
 
 
-    const initialValues = {name: "", email: "", tel: "", asent: "", msg: ""};
-    const [formValues, setFormValues] = useState(initialValues);
+    // const initialValues = {name: "", email: "", tel: "", asent: "", msg: ""};
+    const [nombre,setNombre]=useState("")
+    const [email,setEmail]=useState("")
+    const [telefono,setTelefono]=useState("")
+    const [asunto,setAsunto]=useState("")
+    const [mensaje,setMensaje]=useState("")
+
+   
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
   
-    const handleChange = (e) => {
-      //console.log(e.target);
-      const {name, value} = e.target;
-      setFormValues({...formValues, [name]: value});
-      //console.log(formValues);
-    };
+    // const handleChange = (e) => {
+    //   //console.log(e.target);
+    //   const {name, value} = e.target;
+    //   setFormValues({...formValues, [name]: value});
+    //   //console.log(formValues);
+    // };
   
-    const handleSubmit = (e) =>{
-      e.preventDefault();
-      setFormErrors(validate(formValues));
-      setIsSubmit(true);
-    };
+    // const handleSubmit = (e) =>{
+    //   e.preventDefault();
+    //   setFormErrors(validate(formValues));
+    //   setIsSubmit(true);
+    // };
+
+    
   
+    const handleSubmit =(e)=>{
+
+       e.preventDefault();
+      const values = { nombre, email, telefono, asunto, mensaje };
+  const errors = validate(values);
+  setFormErrors(errors);
+  setIsSubmit(true);
+    }
+
     useEffect(() => {
       // console.log(formErrors);
       if(Object.keys(formErrors.length === 0 && isSubmit)){
-        console.log(formValues);
+        //
       }
-    }, [formErrors, formValues, isSubmit]);
+    }, [formErrors, isSubmit, nombre, email, telefono, asunto, mensaje]);
     const validate = (values) => {
       const errors = {};
       const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -66,7 +83,7 @@ const Contacto = () => {
     
     <div>
         <Header/>
-        <Carousel fade class="custom-carousel" indicators={false} controls={false}>
+        <Carousel fade className="custom-carousel" indicators={false} controls={false}>
             <Carousel.Item>
                 <img className="d-block w-100" src="/public/img/contacto.jpg" alt="First slide"/>
                 <div className="overlay"></div>
@@ -83,19 +100,19 @@ const Contacto = () => {
             <h1>Llénanos el formulario para contactarte</h1>
             <form onSubmit={handleSubmit} className="contact-form">
                 <input type='text' id ="name" name="name" placeholder='Nombre(s)' maxLength={50}
-                value={formValues.name} onChange={handleChange}/>
+                value={nombre} onChange={(e)=>setNombre(e.target.value)}/>
                 <p className='error'>{formErrors.name}</p>
                 <input type='text' id ="email" name="email" placeholder='Correo electrónico'
-                value={formValues.email} onChange={handleChange}/>
+                value={email} onChange={(e)=>setEmail(e.target.value)}/>
                 <p className='error'>{formErrors.email}</p>
                 <input type='tel' id ="tel" name="tel" placeholder='Número de teléfono/celular'
-                value={formValues.tel} onChange={handleChange}/>
+                value={telefono} onChange={(e)=>setTelefono(e.target.value)}/>
                 <p className='error'>{formErrors.tel}</p>
                 <input type='text' id ="asent" name="asent" placeholder='Asunto'
-                value={formValues.asent} onChange={handleChange}/>
+                value={asunto} onChange={(e)=>setAsunto(e.target.value)}/>
                 <p className='error'>{formErrors.asent}</p>
                 <textarea id="msg" name="msg" placeholder='Mensaje' rows='5'
-                value={formValues.msg} onChange={handleChange}></textarea>
+                value={mensaje} onChange={(e)=>setMensaje(e.target.value)}></textarea>
                 <p className='error'>{formErrors.msg}</p>
                 <button className='btn-send'>Enviar</button>
             </form>
