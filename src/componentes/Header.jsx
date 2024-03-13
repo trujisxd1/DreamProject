@@ -16,11 +16,11 @@ const Header = () => {
         <IoMdClose id="close-icon"/>
     </label>
     <nav className="nav-bar">
-        <a href='https://www.DreamScape-inicio.com' style={{"--i":0}}><Link to='/'><MdHomeFilled class="icon"/>Inicio</Link></a>
-        <a href='https://www.DreamScape-pueblos-magicos.com' style={{"--i":1}}><Link to='/pueblos-magicos' class="active"><MdChurch class="icon"/>Pueblos Mágicos</Link></a>
-        <a href='https://www.DreamScape-eventos-internacionales.com' style={{"--i":2}}><Link to='/eventos-internacionales'><FaCalendarAlt class="icon"/>Eventos Internacionales</Link></a>
-        <a href='https://www.DreamScape-ecoturismo.com' style={{"--i":3}}><Link to='/ecoturismo'><MdNaturePeople class="icon"/>Ecoturismo</Link></a>
-        <a href='https://www.DreamScape-contacto.com' style={{"--i":4}}><Link to='/contacto'><MdPhone class="icon"/>Contacto</Link></a>
+        <a href='https://www.DreamScape-inicio.com' style={{"--i":0}}><Link to='/'><MdHomeFilled className="icon"/>Inicio</Link></a>
+        <a href='https://www.DreamScape-pueblos-magicos.com' style={{"--i":1}}><Link to='/pueblos-magicos' className="active"><MdChurch className="icon"/>Pueblos Mágicos</Link></a>
+        <a href='https://www.DreamScape-eventos-internacionales.com' style={{"--i":2}}><Link to='/eventos-internacionales'><FaCalendarAlt className="icon"/>Eventos Internacionales</Link></a>
+        <a href='https://www.DreamScape-ecoturismo.com' style={{"--i":3}}><Link to='/ecoturismo'><MdNaturePeople className="icon"/>Ecoturismo</Link></a>
+        <a href='https://www.DreamScape-contacto.com' style={{"--i":4}}><Link to='/contacto'><MdPhone className="icon"/>Contacto</Link></a>
     </nav>
 </header>
   )
