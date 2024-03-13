@@ -32,7 +32,7 @@ const Ecoturismo = () => {
                 <h3>{ecobio.title}</h3>
                 <p>{ecobio.description}</p>
                 <div className="link">
-                  <a href={ecobio.link}><Link to='#'>Ver más detalles</Link></a>
+                  <Link to='#'>Ver más detalles</Link>
                 </div>
               </div>
             </div>

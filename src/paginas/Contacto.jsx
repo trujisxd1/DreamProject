@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "../componentes/Header"
 import Carousel from 'react-bootstrap/Carousel';
 import { ServicioContacto } from "../servicios/ServicioContactos";
+import Swal from "sweetalert2";
 
 const Contacto = () => {
 
@@ -43,9 +44,17 @@ const Contacto = () => {
         
   
         // Mostrar mensaje de éxito o realizar cualquier acción adicional después de enviar los datos
-        console.log('Contacto creado exitosamente');
+        Swal.fire({
+          icon:"success",
+          title:"Enviado",
+          text:"Enviado con exito"
+        })
       } catch (error) {
-        console.error('Error al crear el contacto:', error.message);
+        Swal.fire({
+          icon:"error",
+          title:"Oops",
+          text:"Algo salio mal"
+        })
       }
     };
 

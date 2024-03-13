@@ -39,7 +39,7 @@ const PueblosMagicos = () => {
           <h3>{card.title}</h3>
           <p>{card.description}</p>
           <div className="link">
-            <a href={card.link}><Link to='#'>Ver más detalles</Link></a>
+            <Link to='#'>Ver más detalles</Link>
           </div>
         </div>
       </div>

@@ -9,18 +9,18 @@ import { Link } from "react-router-dom"
 const Header = () => {
   return (
     <header className="header">
-    <a href='/' className="logo"><Link to='/'><img src="/img/Logo.png" alt=''/></Link></a>
+    <Link to='/'  className="logo"><img src="/img/Logo.png" alt=''/></Link>
     <input type='checkbox' id="check"/>
     <label htmlFor="check" className="icons">
         <IoMenu id="menu-icon"/>
         <IoMdClose id="close-icon"/>
     </label>
     <nav className="nav-bar">
-        <a href='https://www.DreamScape-inicio.com' style={{"--i":0}}><Link to='/'><MdHomeFilled className="icon"/>Inicio</Link></a>
-        <a href='https://www.DreamScape-pueblos-magicos.com' style={{"--i":1}}><Link to='/pueblos-magicos' className="active"><MdChurch className="icon"/>Pueblos Mágicos</Link></a>
-        <a href='https://www.DreamScape-eventos-internacionales.com' style={{"--i":2}}><Link to='/eventos-internacionales'><FaCalendarAlt className="icon"/>Eventos Internacionales</Link></a>
-        <a href='https://www.DreamScape-ecoturismo.com' style={{"--i":3}}><Link to='/ecoturismo'><MdNaturePeople className="icon"/>Ecoturismo</Link></a>
-        <a href='https://www.DreamScape-contacto.com' style={{"--i":4}}><Link to='/contacto'><MdPhone className="icon"/>Contacto</Link></a>
+        <Link to='/'  style={{"--i":0}}><MdHomeFilled className="icon"/>Inicio</Link>
+         <Link to='/pueblos-magicos' style={{"--i":1}} className="active"><MdChurch className="icon"/>Pueblos Mágicos</Link>
+         <Link to='/eventos-internacionales' style={{"--i":2}}><FaCalendarAlt className="icon"/>Eventos Internacionales</Link>
+         <Link to='/ecoturismo' style={{"--i":3}}><MdNaturePeople className="icon"/>Ecoturismo</Link>
+         <Link to='/contacto' style={{"--i":4}}><MdPhone className="icon"/>Contacto</Link>
     </nav>
 </header>
   )

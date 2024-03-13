@@ -36,7 +36,7 @@ const EventosInternacionales = () => {
                 <h3>{festival.title}</h3>
                 <p>{festival.description}</p>
                 <div className="link">
-                  <a href={festival.link}><Link to='#'>Ver más detalles</Link></a>
+                 <Link to='#'>Ver más detalles</Link>
                 </div>
               </div>
             </div>
