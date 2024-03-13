@@ -12,7 +12,7 @@ const PueblosMagicos = () => {
     <>
      <div>
        <Header/>
-        <Carousel fade class="custom-carousel" indicators={false} controls={false}>
+        <Carousel fade className="custom-carousel" indicators={false} controls={false}>
             <Carousel.Item>
                 <img className="d-block w-100" src="/public/img/pueblos_magicos.jpg" alt="First slide"/>
                 <div className="overlay"></div>
